@@ -6,9 +6,9 @@ Rental
  - name
 
 Reservation
-  -rental_id
-  -checkin(date)
-  -checkout(date)
+  - rental_id
+  - checkin(date)
+  - checkout(date)
 
 The view has a table of Reservations with "previous reservation ID".
 Previous reservation is a reservation that is before the current one into same
@@ -27,6 +27,7 @@ Res-5(2022-01-20, 2022-02-11)
 
 
 |Rental_name|ID      |Checkin    |Checkout  |Previous reservation, ID|
+| --- | --- | --- | --- | --- |
 |rental-1   |Res-1 ID| 2022-01-01|2022-01-13| -                      |
 |rental-1   |Res-2 ID| 2022-01-20|2022-02-10| Res-1 ID               |
 |rental-1   |Res-3 ID| 2022-02-20|2022-03-10| Res-2 ID               |
