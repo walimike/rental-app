@@ -1,0 +1,24 @@
+{% if reservations %}
+    <h1>Reservations table</h1>
+
+    <table border="1">
+        <tr>
+            <td>Rental_name</td>
+            <td>ID</td>
+            <td>Checkin</td>
+            <td>Checkout</td>
+            <td>Previous reservation, ID</td>
+        </tr>
+        {% for reservation in reservations %}
+            <tr>
+            <td>{{ reservation.rental_name }}</td>
+            <td>{{ reservation.id }}</td>
+            <td>{{ reservation.checkin }}</td>
+            <td>{{ reservation.checkout }}</td>
+            <td>{{ reservation.previous_id }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% else %}
+    <p>No reservations are available. Go to the admin site to create some instances</p>
+{% endif %}
