@@ -12,10 +12,14 @@
         {% for reservation in reservations %}
             <tr>
             <td>{{ reservation.rental_name }}</td>
-            <td>{{ reservation.id }}</td>
+            <td>Res-{{ reservation.id }} ID</td>
             <td>{{ reservation.checkin_display }}</td>
             <td>{{ reservation.checkout_display }}</td>
-            <td>{{ reservation.previous_id }}</td>
+            {% if reservation.previous_id %}
+                <td>Res-{{ reservation.previous_id }} ID</td>
+            {% else %}
+                <td>---</td>
+            {% endif %}
             </tr>
         {% endfor %}
     </table>

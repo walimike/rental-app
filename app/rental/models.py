@@ -24,7 +24,7 @@ class Reservations(models.Model):
     @property
     def previous_id(self):
         previous_item = self.rental.reservations.filter(id__lt=self.id)
-        return previous_item.latest('id').id if previous_item.exists() else '----'
+        return previous_item.latest('id').id if previous_item.exists() else None
     
     @property
     def checkin_display(self):
