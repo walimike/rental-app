@@ -33,3 +33,13 @@ Res-5(2022-01-20, 2022-02-11)
 |rental-1   |Res-3 ID| 2022-02-20|2022-03-10| Res-2 ID               |
 |rental-2   |Res-4 ID| 2022-01-02|2022-01-20| -                      |
 |rental-2   |Res-5 ID| 2022-01-20|2022-01-11| Res-4 ID               |
+
+### Setting up
+- Clone this repository
+- `cp .env.exmple .env`
+- Modify .env with actual db credentials
+- `python3 -m venv env`
+- `source env/bin/activate`
+- `pip install -r requirements.txt`
+- `python manage.py seed --mode=refresh`
+- `python mange.py runserver`
