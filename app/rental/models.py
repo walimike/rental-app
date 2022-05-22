@@ -25,3 +25,11 @@ class Reservations(models.Model):
     def previous_id(self):
         previous_item = self.rental.reservations.filter(id__lt=self.id)
         return previous_item.latest('id').id if previous_item.exists() else '----'
+    
+    @property
+    def checkin_display(self):
+        return self.checkin.date()
+
+    @property
+    def checkout_display(self):
+        return self.checkout.date()
